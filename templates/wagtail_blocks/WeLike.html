@@ -1,0 +1,52 @@
+{% load wagtailcore_tags %}
+<div class="product-area pb-155">
+            <div class="container">
+                <div class="section-title-8 mb-65">
+                    <h2>Так же может вам понравиться</h2>
+                </div>
+                <div class="product-slider-active-4">
+                    {% for item in value.items %}
+                        <div class="product-wrap-plr-1">
+                        <div class="product-wrap" >
+
+                            <div class="product-img product-img-zoom mb-25">
+                                <a href="product-details.html">
+                                    {% image item.image fill-270x360 %}
+                                </a>
+                            </div>
+
+                            <div class="product-content">
+                                <h4><a href="product-details.html">{{item.title}}</a></h4>
+                                <div class="product-price">
+                                    <span>{{ page.prise }} ₽</span>
+                                    {% if page.old_price != 0.00  %}
+                                        <span class="old-price">{{ page.old_price }} ₽</span>
+                                    {% endif %}
+                                </div>
+
+                            </div>
+
+                            <div class="product-action-position-1 text-center">
+                                <div class="product-content">
+                                    <h4><a href="product-details.html">{{item.title}}</a></h4>
+                                    <div class="product-price">
+                                    <span>{{ page.prise }} ₽</span>
+                                    {% if page.old_price != 0.00  %}
+                                        <span class="old-price">{{ page.old_price }} ₽</span>
+                                    {% endif %}
+                                </div>
+                                </div>
+                                <div class="product-action-wrap">
+                                    <div class="product-action-cart">
+                                        <button title="Add to Cart">Добавить в корзину</button>
+                                    </div>
+                                    <button data-toggle="modal" data-target="#exampleModal"><i class="icon-zoom"></i></button>
+                                    <button title="Добавить в избранное"><i class="icon-heart-empty"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>

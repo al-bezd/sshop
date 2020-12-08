@@ -1,0 +1,35 @@
+{% load static  %}
+<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}{% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}{% endblock %}{% block title_suffix %}{% endblock %}</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.png">
+
+    <!-- All CSS is here
+	============================================ -->
+
+    <link rel="stylesheet" href="/static/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/vendor/vandella.css">
+    <link rel="stylesheet" href="/static/css/vendor/jellybelly.css">
+    <link rel="stylesheet" href="/static/css/vendor/icofont.min.css">
+    <link rel="stylesheet" href="/static/css/vendor/fontello.css">
+    <link rel="stylesheet" href="/static/css/plugins/easyzoom.css">
+    <link rel="stylesheet" href="/static/css/plugins/slick.css">
+    <link rel="stylesheet" href="/static/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="/static/css/plugins/animate.css">
+    <link rel="stylesheet" href="/static/css/plugins/magnific-popup.css">
+    <link rel="stylesheet" href="/static/css/plugins/jquery-ui.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <!-- Use the minified version files listed below for better performance and remove the files listed above
+    <link rel="stylesheet" href="/static/css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="/static/css/plugins/plugins.min.css">
+    <link rel="stylesheet" href="/static/css/style.min.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/market.css' %}">
+{% block extra_css %}
+            {# Override this in templates to add extra stylesheets #}
+        {% endblock %}
